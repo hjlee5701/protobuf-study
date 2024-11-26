@@ -1,0 +1,41 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.6'
+	id 'java-library'
+}
+
+group = 'study'
+version = ''
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// grpc 관련 라이브러리 의존, proto 파일 컴파일 결과물
+	implementation project(':grpc-interface')
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	compileOnly 'org.projectlombok:lombok:1.18.28' // 컴파일 시에만 사용
+	annotationProcessor 'org.projectlombok:lombok:1.18.28' // Annotation Processor 설정
+
+	// gRPC 통신 (server, client)
+	implementation "io.grpc:grpc-netty:1.57.2"
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
