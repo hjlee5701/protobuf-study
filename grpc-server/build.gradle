@@ -32,6 +32,8 @@ dependencies {
 	// gRPC 통신 (server, client)
 	implementation "io.grpc:grpc-netty:1.57.2"
 
+	// client 통신에 필요한 gRPC 라이브러리 (선택)
+	// implementation "io.grpc:grpc-okhttp:1.57.2" // gRPC version
 
 
 }
