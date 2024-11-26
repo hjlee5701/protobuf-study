@@ -1,1 +1,2 @@
-rootProject.name = 'protobuf-study'
+//rootProject.name = 'protobuf-study'
+include ":grpc-server", ":grpc-interface"
