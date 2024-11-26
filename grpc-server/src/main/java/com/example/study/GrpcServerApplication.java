@@ -1,13 +1,13 @@
-package study.protobuf_study;
+package com.example.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProtobufStudyApplication {
+public class GrpcServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProtobufStudyApplication.class, args);
+		SpringApplication.run(GrpcServerApplication.class, args);
 	}
 
 }
